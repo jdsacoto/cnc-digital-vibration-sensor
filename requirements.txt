@@ -1,0 +1,45 @@
+# requirements.txt — alternativa pip para el proyecto
+# "Sensor virtual de vibraciones para máquina CNC".
+# Lista curada manualmente; versiones alineadas con `environment.yml`.
+#
+# IMPORTANTE:
+#   - El entorno canónico y reproducible del proyecto es `environment.yml`
+#     (Conda + canal conda-forge). Recrear con:
+#         conda env create -f environment.yml
+#         conda activate cnc-vsensor
+#
+#   - Este `requirements.txt` es una alternativa best-effort para evaluadores
+#     o sistemas sin Conda. Permite ejecutar el pipeline, pero NO garantiza
+#     paridad bit-a-bit con el baseline certificado del 2026-05-13: las
+#     dependencias transitivas y los binarios de PyPI pueden diferir de los
+#     wheels de conda-forge.
+#
+#   - Python esperado: 3.11.x.
+#
+#   - Uso típico:
+#         python -m venv .venv
+#         source .venv/bin/activate        # Windows: .venv\Scripts\activate
+#         pip install -r requirements.txt
+
+# --- Núcleo numérico y pipeline de datos ------------------------------------
+numpy==2.4.3
+pandas==3.0.3
+scipy==1.17.1
+scikit-learn==1.8.0
+h5py==3.16.0
+
+# --- Modelos gradient boosting ----------------------------------------------
+xgboost==3.2.0
+lightgbm==4.6.0
+catboost==1.2.10
+
+# --- Visualización ----------------------------------------------------------
+matplotlib==3.10.9
+seaborn==0.13.2
+
+# --- Stack Jupyter (necesario para ejecutar los notebooks v2) ---------------
+jupyter==1.1.1
+jupyterlab==4.5.7
+notebook==7.5.6
+ipykernel==7.2.0
+nbconvert==7.17.1

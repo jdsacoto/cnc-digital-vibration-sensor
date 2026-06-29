@@ -1,0 +1,11 @@
+model,output,target,load,R2,MAE,RMSE
+LightGBM,single,ACCEL_RMS,all,0.8547,26.5,54.961
+LightGBM,multi,ACCEL_RMS,all,0.8547,26.5,54.961
+XGBoost,single,ACCEL_RMS,all,0.8541,26.763,55.071
+XGBoost,multi,ACCEL_RMS,all,0.8541,26.763,55.071
+LightGBM,single,ACCEL_PEAK,all,0.8513,66.613,133.696
+RandomForest,multi,ACCEL_RMS,all,0.8513,27.733,55.589
+LightGBM,multi,ACCEL_PEAK,all,0.8513,66.613,133.696
+RandomForest,single,ACCEL_RMS,all,0.8497,26.268,55.898
+XGBoost,single,ACCEL_PEAK,all,0.8463,69.764,135.928
+XGBoost,multi,ACCEL_PEAK,all,0.8463,69.764,135.928

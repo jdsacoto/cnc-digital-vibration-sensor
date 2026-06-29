@@ -1,0 +1,229 @@
+{
+  "tool_validation": 1018,
+  "n_test_days": 4,
+  "high_cardinality_threshold": 15,
+  "corr_threshold": 0.95,
+  "random_state": 42,
+  "train_dates": [
+    "2020-06-01",
+    "2020-06-02",
+    "2020-06-03",
+    "2020-06-04",
+    "2020-06-08",
+    "2020-06-09",
+    "2020-06-10",
+    "2020-06-11",
+    "2020-06-12",
+    "2020-06-15",
+    "2020-06-16",
+    "2020-06-18",
+    "2020-06-19",
+    "2020-06-22",
+    "2020-06-23",
+    "2020-06-24"
+  ],
+  "test_dates": [
+    "2020-06-25",
+    "2020-06-26",
+    "2020-06-29",
+    "2020-06-30"
+  ],
+  "target_vars": [
+    "ACCEL_PEAK",
+    "ACCEL_RMS",
+    "ACCEL_RMS_FREQ"
+  ],
+  "final_columns": [
+    "ACCEL_PEAK",
+    "ACCEL_RMS",
+    "ACCEL_RMS_FREQ",
+    "B",
+    "CURR_B",
+    "CURR_X",
+    "CURR_Y",
+    "CURR_Z",
+    "FEED_HOLD",
+    "LAST_M_CODE",
+    "PROG_BLOCK_NUM",
+    "PROG_NAME_ACTIVE",
+    "PROG_STATUS",
+    "RAPID_OVERRIDE",
+    "RAPID_TRAVERSING",
+    "SPEED_RMS",
+    "SPINDLE_ACTUAL_FEED",
+    "SPINDLE_ACTUAL_SPEED",
+    "SPINDLE_LOAD",
+    "TEMPERATURE",
+    "X",
+    "Y",
+    "Z",
+    "DATE",
+    "JOG_OVERRIDE_47.0",
+    "SPINDLE_OVERRIDE_X105_60.0",
+    "SPINDLE_OVERRIDE_X105_70.0",
+    "SPINDLE_OVERRIDE_X105_80.0",
+    "SPINDLE_OVERRIDE_X105_90.0",
+    "SPINDLE_OVERRIDE_X105_100.0",
+    "SPINDLE_OVERRIDE_X105_120.0",
+    "SPINDLE_OVERRIDE_X105_420.0"
+  ],
+  "outlier_thresholds": {
+    "ACCEL_PEAK": {
+      "method": "iqr",
+      "low": -1161.0158031084097,
+      "high": 1618.4778359471534
+    },
+    "ACCEL_RMS": {
+      "method": "iqr",
+      "low": -495.2460147288381,
+      "high": 686.7027100251645
+    },
+    "ACCEL_RMS_FREQ": {
+      "method": "iqr",
+      "low": -562.7196662280024,
+      "high": 839.8230951659533
+    },
+    "B": {
+      "method": "domain",
+      "low": 0.0,
+      "high": 360.0
+    },
+    "CURR_B": {
+      "method": "winsorize",
+      "low": -7.99,
+      "high": 9.96
+    },
+    "CURR_X": {
+      "method": "winsorize",
+      "low": -56.52,
+      "high": 55.86880000000005
+    },
+    "CURR_Y": {
+      "method": "winsorize",
+      "low": 0.79,
+      "high": 46.814700000000016
+    },
+    "CURR_Z": {
+      "method": "winsorize",
+      "low": -137.39,
+      "high": 138.61
+    },
+    "SPEED_RMS": {
+      "method": "winsorize",
+      "low": 0.0873971899272874,
+      "high": 11.134784407913694
+    },
+    "SPINDLE_ACTUAL_FEED": {
+      "method": "percentile",
+      "low": 0.0,
+      "high": 60688.28000000003
+    },
+    "SPINDLE_ACTUAL_SPEED": {
+      "method": "domain",
+      "low": 0.0,
+      "high": 15000.0
+    },
+    "SPINDLE_LOAD": {
+      "method": "winsorize",
+      "low": 0.0,
+      "high": 161.0
+    },
+    "TEMPERATURE": {
+      "method": "percentile",
+      "low": 14.070274353027344,
+      "high": 25.758575439453125
+    },
+    "X": {
+      "method": "winsorize",
+      "low": -349.3999,
+      "high": 365.229
+    },
+    "Y": {
+      "method": "winsorize",
+      "low": 195.1837995,
+      "high": 636.706
+    },
+    "Z": {
+      "method": "winsorize",
+      "low": -17.5,
+      "high": 800.0
+    }
+  },
+  "ohe_columns": [
+    "JOG_OVERRIDE",
+    "SPINDLE_OVERRIDE_X105",
+    "X105"
+  ],
+  "ohe_categories": {
+    "JOG_OVERRIDE": [
+      "29.0",
+      "47.0"
+    ],
+    "SPINDLE_OVERRIDE_X105": [
+      "50.0",
+      "60.0",
+      "70.0",
+      "80.0",
+      "90.0",
+      "100.0",
+      "120.0",
+      "420.0"
+    ],
+    "X105": [
+      "0.0",
+      "1.0",
+      "2.0",
+      "3.0",
+      "4.0",
+      "5.0",
+      "7.0",
+      "37.0"
+    ]
+  },
+  "correlation_dropped": [
+    "X105_37.0",
+    "X105_5.0",
+    "X105_7.0",
+    "X105_4.0",
+    "X105_1.0",
+    "X105_3.0",
+    "X105_2.0"
+  ],
+  "correlation_pairs_above_threshold": [
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_60.0",
+      "col_b": "X105_1.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_70.0",
+      "col_b": "X105_2.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_80.0",
+      "col_b": "X105_3.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_90.0",
+      "col_b": "X105_4.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_100.0",
+      "col_b": "X105_5.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_120.0",
+      "col_b": "X105_7.0",
+      "abs_corr": 1.0
+    },
+    {
+      "col_a": "SPINDLE_OVERRIDE_X105_420.0",
+      "col_b": "X105_37.0",
+      "abs_corr": 1.0
+    }
+  ]
+}

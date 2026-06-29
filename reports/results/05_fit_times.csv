@@ -1,0 +1,6 @@
+model,fit_s_total,fit_s_promedio,n_experimentos
+XGBoost,29.58,1.64,18
+CatBoost,44.99,2.5,18
+LightGBM,104.02,5.78,18
+RandomForest,112.92,6.27,18
+MLPRegressor,605.63,33.65,18

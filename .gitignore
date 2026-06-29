@@ -1,0 +1,73 @@
+# ============================================================
+# .gitignore — proyecto sensor virtual de vibraciones CNC
+# ============================================================
+# Filosofía: el repo guarda código y notebooks. Datos, modelos
+# entrenados y figuras pesadas se regeneran ejecutando el código.
+# Si necesitas compartirlos, usa un servicio aparte (no Git).
+
+# --- Datasets crudos y procesados ----------------------------
+*.h5
+*.hdf5
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Carpetas de datos del proyecto actual
+Data/
+All days data csv/
+All days data csv modified/
+All days data excel/
+Datos por herramienta 1018/
+Filterdata/
+data_output/
+data_output_*/
+
+# Estructura futura (Fase 1)
+data/
+outputs/
+
+# --- Modelos serializados ------------------------------------
+*.pkl
+*.joblib
+*.keras
+Modelos2/
+Modelos3/
+models/
+catboost_info/
+
+# --- Figuras / PDFs pesados ---------------------------------
+graficas_*.pdf
+nuevo_pdf_*.pdf
+pdf_images/
+pdf_images_histograma/
+*.png
+*.jpg
+*.jpeg
+
+# --- Jupyter / Python ---------------------------------------
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# --- Entornos virtuales -------------------------------------
+.venv/
+venv/
+env/
+
+# --- IDE / sistema ------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Phase 3.4 outputs: track final results and figures
+!reports/
+!reports/figures/
+!reports/results/
+!reports/figures/*.png
+!reports/results/*.csv
