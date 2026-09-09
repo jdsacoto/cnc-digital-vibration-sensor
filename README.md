@@ -62,7 +62,7 @@ En total: 14 CSV y 4 resúmenes en `reports/results/`, y 13 PNG más el índice 
 
 ```bash
 conda env create -f environment.yml
-conda activate cnc-vsensor
+conda activate tfm-cnc
 ```
 
 El entorno está fijado a `python=3.11` y depende únicamente del canal `conda-forge`; produce el baseline reproducible bit a bit.
@@ -107,7 +107,7 @@ El dataset fuente y los artefactos intermedios (`df_train.csv`, `df_test.csv`, e
 
 ## Ejecutar el pipeline
 
-Con el entorno `cnc-vsensor` activo, desde la raíz del repositorio:
+Con el entorno `tfm-cnc` activo, desde la raíz del repositorio:
 
 ```bash
 # 1. Pipeline de datos (genera df_train.csv, df_test.csv, filter_metadata.json)

@@ -6,7 +6,7 @@
 #   - El entorno canónico y reproducible del proyecto es `environment.yml`
 #     (Conda + canal conda-forge). Recrear con:
 #         conda env create -f environment.yml
-#         conda activate cnc-vsensor
+#         conda activate tfm-cnc
 #
 #   - Este `requirements.txt` es una alternativa best-effort para evaluadores
 #     o sistemas sin Conda. Permite ejecutar el pipeline, pero NO garantiza

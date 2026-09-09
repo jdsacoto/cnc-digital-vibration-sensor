@@ -1,10 +1,10 @@
 # Entorno conda para el proyecto "Sensor virtual de vibraciones para máquina CNC".
-# Creado con: conda create -n cnc-vsensor --override-channels -c conda-forge ...
+# Creado con: conda create -n tfm-cnc --override-channels -c conda-forge ...
 # IMPORTANTE: este entorno NO debe depender del canal 'defaults' (sujeto a TOS de Anaconda Inc).
 # Recrear en otra máquina con: conda env create -f environment.yml
 #   (si conda 26+ se queja de 'defaults', no debería aparecer aquí abajo)
 
-name: cnc-vsensor
+name: tfm-cnc
 channels:
   - conda-forge
 dependencies:
