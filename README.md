@@ -94,6 +94,9 @@ pip install -r requirements.txt
 │   ├── read_data_v2.ipynb        Data/*.h5 → df_train.csv, df_test.csv
 │   ├── models_v2.ipynb           df_*.csv → métricas de los modelos
 │   ├── results_figures.ipynb     → reports/figures/*, reports/results/*
+│   ├── experiments/              experimentos complementarios (ejecutados, con salidas)
+│   │   ├── neural_mlp_v5_executed.ipynb   red densa sobre ACCEL_RMS
+│   │   └── rnn_v1_executed.ipynb          modelos secuenciales LSTM/GRU
 │   └── legacy/                   notebooks previos al refactor (congelados)
 ├── reports/
 │   ├── figures/                  13 PNG (6 de v2, 7 de v3) + índice de figuras v3
@@ -150,6 +153,17 @@ python -m src.experiments.generate_figures_v3           # figuras v3 (solo lee C
 > vibraciones. En consecuencia se reencuadró como **análisis de sensibilidad**, y los archivos
 > `ablation_feature_sensitivity.*` recogen esa lectura corregida sobre los mismos datos, sin
 > reentrenar. Ambos conjuntos se publican para dejar trazable la revisión.
+
+### Experimentos complementarios con redes neuronales
+
+`notebooks/experiments/` contiene dos notebooks ya ejecutados, con sus salidas y figuras
+guardadas, que contrastan el bloque de *boosting* frente a familias de modelos distintas:
+
+- `neural_mlp_v5_executed.ipynb` — red densa de mayor capacidad sobre `ACCEL_RMS`.
+- `rnn_v1_executed.ipynb` — modelos secuenciales con celdas LSTM y GRU.
+
+En ambos casos las alternativas neuronales **no superan** al bloque LightGBM/XGBoost sobre las
+variables disponibles. Se conservan como material complementario y línea de trabajo futuro.
 
 ## Reproducibilidad
 
